@@ -10,6 +10,8 @@ class rxForm extends React.Component {
           modalError: false,
         };
       }
+    
+    TDAPP = window.TDAPP || { };
     onClose = key => () => {
         this.setState({
           [key]: false,
@@ -34,6 +36,7 @@ class rxForm extends React.Component {
             }
             else {
                 this.showModal('modalSucess')(e);
+                this.TDAPP.onEvent("提交申请",value.phone,value);
                 this.props.form.resetFields();
             }});
     }
