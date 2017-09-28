@@ -45,6 +45,7 @@ class rxForm extends React.Component {
             <List renderHeader={() => '请输入贷款信息'}>
             <InputItem
               clear
+              placeholder="请输入姓名"
               {...getFieldProps('name', {
                 rules: [
                     {
@@ -59,6 +60,7 @@ class rxForm extends React.Component {
                 {...getFieldProps('id')}
                 type="bankCard"
                 clear
+                placeholder="8888 8888 8888"
               >身份证</InputItem>
               <InputItem
                 {...getFieldProps('phone', {

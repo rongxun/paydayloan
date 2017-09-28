@@ -16,6 +16,7 @@ class App extends React.Component {
         selectedTab: 'blueTab',
         badge: 3,
         hidden: false,
+        dot: true,
       };
     }
   
@@ -82,10 +83,12 @@ class App extends React.Component {
             selectedIcon={{ uri: Med }}
             title="申请"
             key="申请"
+            dot={this.state.dot}
             selected={this.state.selectedTab === 'yellowTab'}
             onPress={() => {
               this.setState({
                 selectedTab: 'yellowTab',
+                dot: false
               });
             }}
           >
