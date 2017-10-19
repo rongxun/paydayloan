@@ -173,7 +173,7 @@ class rxNews extends React.Component {
             <img style={{ height: '1.26rem', width: '1.26rem', marginRight: '0.3rem' }} src={obj.img} alt="icon" />
             <div style={{ display: 'inline-block' }}>
               <div style={{ marginBottom: '0.16rem', color: '#000', fontSize: '0.32rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '5rem' }}>{obj.des}</div>
-              <div style={{ fontSize: '0.32rem' }}><span style={{ fontSize: '0.6rem', color: '#FF6E27' }}>{1+parseInt(rowID)}</span> 个大奖等你拿</div>
+              <div style={{ fontSize: '0.32rem' }}><span style={{ fontSize: '0.6rem', color: '#FF6E27' }}>{1+parseInt(rowID,10)}</span> 个大奖等你拿</div>
             </div>
           </div>
         </div>
