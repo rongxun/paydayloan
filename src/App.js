@@ -8,6 +8,13 @@ import  Moneyed from './assets/moneyS.svg';
 import Banner from './rxBanner';
 import News from './rxNews';
 import Form from './rxForm';
+import  Ppl from './assets/ppl.svg';
+import  Ppled from './assets/pplS.svg';
+import Network from './rxNetwork'
+
+import 'whatwg-fetch';
+
+fetch('/api/hello').then(res => console.log(res.text()));
 
 class App extends React.Component {
     constructor(props) {
@@ -93,6 +100,20 @@ class App extends React.Component {
             }}
           >
            <Form/>
+          </TabBar.Item>
+          <TabBar.Item
+            icon={{ uri: Ppl }}
+            selectedIcon={{ uri: Ppled }}
+            title="分销"
+            key="分销"
+            selected={this.state.selectedTab === 'PplTab'}
+            onPress={() => {
+              this.setState({
+                selectedTab: 'PplTab'
+              });
+            }}
+          >
+            <Network/>
           </TabBar.Item>
         </TabBar>
       );
